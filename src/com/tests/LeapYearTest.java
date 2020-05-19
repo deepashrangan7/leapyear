@@ -59,7 +59,7 @@ public class LeapYearTest {
 	@Test
 	public void testLeapYearDivideBy4AndBy100() {
 
-		boolean flag = leapYearService.isDivisibleBy4AndNotBy100(2000);
+		boolean flag = leapYearService.isDivisibleBy4AndNotBy100(2300);
 		if (!flag)
 			assert (true);
 		else
@@ -76,5 +76,21 @@ public class LeapYearTest {
 			assert (false);
 	}
 	
-
+	@Test
+	public void isLeapYear() {
+		boolean flag = leapYearService.isLeapYear(2000);
+		if (flag)
+			assert (true);
+		else
+			assert (false);
+	}
+	@Test
+	public void isNotLeapYear() {
+		boolean flag = leapYearService.isLeapYear(2300);
+		if (!flag)
+			assert (true);
+		else
+			assert (false);
+	}
+	
 }

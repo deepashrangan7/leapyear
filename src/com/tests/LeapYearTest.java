@@ -15,17 +15,31 @@ public class LeapYearTest {
 		else
 			assert(false);
 	}
-
-	
-
 	@Test
-	public void testLeapYearDividyBy100NotBy400() {
-		assert (false);
+	public void testLeapYearNotDivideBy400() {
+		boolean flag = leapYearService.isDivisibleBy400(4103);
+		if (!flag)
+			assert (true);
+		else
+			assert(false);
 	}
-
 	@Test
 	public void testLeapYearDividyBy100AndBy400() {
-		assert (false);
+		boolean flag = leapYearService.isDivisibleBy100AndBy400(2000);
+		if(flag)
+			assert(true);
+		else
+			assert(false);
+	
+	}
+	@Test
+	public void testLeapYearDividyBy100AndNotBy400() {
+		boolean flag = leapYearService.isDivisibleBy100AndBy400(2100);
+		if(!flag)
+			assert(true);
+		else
+			assert(false);
+	
 	}
 
 	@Test
